@@ -1,0 +1,32 @@
+{
+  "name": "txt_tocfill",
+  "version": "0.1.0",
+  "description": "Text TOC-fill algorithm implementation",
+  "main": "dist/txt_tocfill.js",
+  "scripts": {
+    "test": "ava src/test*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoneCypher/txt_tocfill.git"
+  },
+  "keywords": [
+    "text",
+    "table",
+    "of",
+    "contents",
+    "toc",
+    "tocfill",
+    "toc_fill"
+  ],
+  "author": "John Haugeland <stonecypher@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StoneCypher/txt_tocfill/issues"
+  },
+  "homepage": "https://github.com/StoneCypher/txt_tocfill#readme",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "ava-spec": "^1.1.0"
+  }
+}
