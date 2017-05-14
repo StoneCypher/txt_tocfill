@@ -1,15 +1,19 @@
 {
   "name": "txt_tocfill",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "Text TOC-fill algorithm implementation",
-  "main": "dist/txt_tocfill.js",
+  "main": "build/txt_tocfill.js",
   "scripts": {
     "test": "ava test/*.js",
+    "test-verbose": "ava test/*.js -v",
     "clean": "rimraf build -f && rimraf dist -f",
+    "babel": "babel src/ -d build/",
     "rename": "node -e \"require('fs').renameSync('./build/txt_tocfill.js', './build/txt_tocfill.es5.js');\"",
     "pack": "browserify -r ./build/txt_tocfill.es5.js:txt_tocfill -o build/txt_tocfill.es5.cjs.js",
     "make": "npm run clean && npm run babel && npm run rename && npm run pack",
-    "babel": "babel src/ -d build/"
+    "build": "npm run make && npm run test-verbose",
+    "postinstall": "npm run build",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

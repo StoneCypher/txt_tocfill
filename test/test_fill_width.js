@@ -1,6 +1,17 @@
 
 import {test, describe} from 'ava-spec';
 
-// const jssm = require('../build/txt_tocfill.js');
+const txt_tocfill = require('../build/txt_tocfill.es5.js'),
+      compute     = txt_tocfill.compute,
+      maxlen      = txt_tocfill.maxlen;
 
-test('tests working', t => t.is(true, true));
+
+
+
+describe('maxlen', async it => {
+    it('says ["a","ab","abc"] is 3', t => t.is(maxlen(['a', 'ab', 'abc']), 3));
+    it('says [] is 0',               t => t.is(maxlen([]),                 0));
+    it('says [""] is 0',             t => t.is(maxlen(['']),               0));
+});
+
+// todo assert that for any randomly generated array of strings, the outputs are all the same length
