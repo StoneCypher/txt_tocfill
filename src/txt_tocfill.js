@@ -19,7 +19,7 @@ const compute = ({
           wppi     = width_pad + interior,
           i_fill_b = fill.repeat(wppi);
 
-    return rows.map( (r,i) => `${r}${left_pad}${i_fill_b.substring(i_fill_b.length - (wppi - r.length), wppi)}${right_pad}${rightrows[i] || ''}`);
+    return rows.map( (r,i) => `${r}${left_pad}${i_fill_b.substring(i_fill_b.length - (wppi - r.length), wppi)}${right_pad}${rightrows[i] === undefined? '' : rightrows[i]}`);
 
 };
 

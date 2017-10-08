@@ -1,6 +1,6 @@
 {
   "name": "txt_tocfill",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Text TOC-fill algorithm implementation",
   "main": "src/txt_tocfill.js",
   "scripts": {
