@@ -1,7 +1,7 @@
 
 import {test, describe} from 'ava-spec';
 
-const txt_tocfill = require('../build/txt_tocfill.es5.js'),
+const txt_tocfill = require('../src/txt_tocfill.js'),
       compute     = txt_tocfill.compute,
       maxlen      = txt_tocfill.maxlen;
 

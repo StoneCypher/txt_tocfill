@@ -1,5 +1,5 @@
 
-const maxlen = (rows : Array<string>) => rows.length? Math.max(... rows.map(r => r.length)) : 0;
+const maxlen = (rows) => rows.length? Math.max(... rows.map(r => r.length)) : 0;
 
 
 
@@ -27,4 +27,4 @@ const compute = ({
 
 
 
-export { maxlen, compute };
+module.exports = { maxlen, compute };
